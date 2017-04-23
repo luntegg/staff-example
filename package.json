@@ -1,0 +1,19 @@
+{
+  "name": "staff.dev",
+  "version": "1.0.0",
+  "description": "just example",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luntegg/staff-example.git"
+  },
+  "author": "luntegg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luntegg/staff-example/issues"
+  },
+  "homepage": "https://github.com/luntegg/staff-example#readme"
+}
