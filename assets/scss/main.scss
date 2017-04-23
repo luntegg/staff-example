@@ -1,0 +1,34 @@
+body {
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+.header {
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+.empty-list {
+    font-size: 18px;
+    padding: 50px;
+    text-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+
+    &.dashed {
+        border-bottom: 1px dashed;
+    }
+}
+
+.btn {
+    &:focus, &:active, &:active:focus {
+        outline: none;
+    }
+
+    &.btn-outline {
+        background: transparent;
+        border: 1px solid #ccc;
+    }
+}

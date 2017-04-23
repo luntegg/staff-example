@@ -15,5 +15,23 @@
   "bugs": {
     "url": "https://github.com/luntegg/staff-example/issues"
   },
-  "homepage": "https://github.com/luntegg/staff-example#readme"
+  "homepage": "https://github.com/luntegg/staff-example#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "del": "^2.2.2",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2"
+  },
+  "devDependencies": {
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-file-include": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="staffApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Staff App</title>
+        <link rel="stylesheet" href="./assets/css/vendor.min.css">
+        <link rel="stylesheet" href="./assets/css/system.min.css">
+    </head>
+    <body>
+        <div class="container workers" ng-controller="WorkerListCtrl">
+            <div class="header">
+                <button type="button" class="btn btn-outline" ng-click="openAboutWindow()">
+                    <i class="fa fa-info"></i>
+                    О приложении
+                </button>
+                <button type="button" class="btn btn-primary pull-right" ng-if="workers.length" ng-click="addWorker()">
+                    <i class="fa fa-plus"></i>
+                    Добавить сотрудника
+                </button>
+            </div>
+
+            <div class="h3">Список сотрудников</div>
+
+            <div ng-if="states.workers.loading">
+                <div class="empty-list">
+                    <i class="fa fa-2x fa-refresh fa-spin"></i>
+                </div>
+            </div>
+            <div ng-if="!states.workers.loading">
+                <div class="empty-list" ng-if="!workers.length">
+                    <div>
+                        Список сотрудников пуст. <span class="clickable dashed" ng-click="addWorker()">Добавьте одного!</span>
+                    </div>
+                    <div class="workers__choice">или</div>
+                    <div>
+                        <span class="clickable dashed" ng-click="getRandomUsers()">Заполните автоматически ;)</span>
+                    </div>
+                </div>
+                <div ng-if="workers.length">
+                    <table class="table">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="*">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Имя</th>
+                            <th>Фамилия</th>
+                            <th>Стаж</th>
+                            <th>Возраст</th>
+                            <th>Адрес</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="worker in workers">
+                            <td>{{ worker.firstName }}</td>
+                            <td>{{ worker.lastName }}</td>
+                            <td>{{ worker.experience }}</td>
+                            <td>{{ worker.age }}</td>
+                            <td>{{ worker.address }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline btn-xs" ng-click="editWorker(worker)">
+                                        <i class="fa fa-pencil"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline btn-xs" ng-click="removeWorker(worker)">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/vendor.min.js"></script>
+        <script src="./assets/js/templates.js"></script>
+        <script src="./assets/js/system.min.js"></script>
+    </body>
+</html>
